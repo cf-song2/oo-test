@@ -187,12 +187,7 @@
         margin-bottom: 10px;
       }
       
-      /* 캡챠 박스 컨테이너 */
-      .captcha-container {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-      }
+
 
       /* Desktop Layout - 1024px 이상 */
       @media (min-width: 1024px) {
@@ -422,25 +417,26 @@
           <!-- Support Image (Mobile only) -->
           <div class="support-image"></div>
 
-          <!-- Bottom Section -->
-          <div class="bottom-section">
-            <div class="captcha-container">
-              ::CAPTCHA_BOX::
-            </div>
-            <div class="info-card">
-              <div class="info-row">
-                <span class="info-label">RAY_ID</span>
-                <div class="info-divider"></div>
-                <span class="info-value">
-                  ::RAY_ID::
-                </span>
+            <!-- Bottom Section -->
+            <div class="bottom-section">
+              <div class="cloudflare-branding">
+                ::CAPTCHA_BOX::
               </div>
-              <div class="info-row">
-                <span class="info-label">IP</span>
-                <div class="info-divider"></div>
-                <span class="info-value">
-                  ::CLIENT_IP::
-                </span>
+              <div class="info-card">
+                <div class="info-row">
+                  <span class="info-label">RAY_ID</span>
+                  <div class="info-divider"></div>
+                  <span class="info-value">
+                    ::RAY_ID::
+                  </span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">IP</span>
+                  <div class="info-divider"></div>
+                  <span class="info-value">
+                    ::CLIENT_IP::
+                  </span>
+                </div>
               </div>
             </div>
           </div>
