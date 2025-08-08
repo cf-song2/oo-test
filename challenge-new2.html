@@ -48,8 +48,7 @@
         align-items: center;
         justify-content: flex-start;
         min-height: 398px;
-        padding: 50px 20px 250px 20px;
-        order: 1;
+        padding: 50px 20px 40px;
       }
 
       .content-wrapper {
@@ -131,8 +130,7 @@
         text-align: center;
         padding: 20px 20px 40px;
         flex-shrink: 0;
-        margin-top: 20px; /* negative margin으로 위로 끄어올리기 */
-        order: 3; /* flexbox order */
+        margin-top: 20px;
       }
 
       .info-card {
@@ -423,6 +421,29 @@
 
           <!-- Support Image (Mobile only) -->
           <div class="support-image"></div>
+
+          <!-- Bottom Section -->
+          <div class="bottom-section">
+            <div class="captcha-container">
+              ::CAPTCHA_BOX::
+            </div>
+            <div class="info-card">
+              <div class="info-row">
+                <span class="info-label">RAY_ID</span>
+                <div class="info-divider"></div>
+                <span class="info-value">
+                  ::RAY_ID::
+                </span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">IP</span>
+                <div class="info-divider"></div>
+                <span class="info-value">
+                  ::CLIENT_IP::
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -431,28 +452,6 @@
         <div class="illustration-wrapper"></div>
       </div>
 
-      <!-- Bottom Section -->
-      <div class="bottom-section">
-        <div class="captcha-container">
-          ::CAPTCHA_BOX::
-        </div>
-        <div class="info-card">
-          <div class="info-row">
-            <span class="info-label">RAY_ID</span>
-            <div class="info-divider"></div>
-            <span class="info-value">
-              ::RAY_ID::
-            </span>
-          </div>
-          <div class="info-row">
-            <span class="info-label">IP</span>
-            <div class="info-divider"></div>
-            <span class="info-value">
-              ::CLIENT_IP::
-            </span>
-          </div>
-        </div>
-      </div>
     </div>
   </body>
 </html>
