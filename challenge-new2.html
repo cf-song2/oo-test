@@ -38,12 +38,7 @@
         background: #ffffff;
       }
       
-      /* 전체 레이아웃 구조 변경 */
-      .page-structure {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-      }
+
 
       /* Main Content - 안내 영역 */
       .main-content {
@@ -56,6 +51,8 @@
         justify-content: center;
         min-height: 398px;
         padding: 50px 20px;
+        position: relative;
+        z-index: 10; /* 중간 z-index 값 */
       }
 
       .content-wrapper {
@@ -116,10 +113,9 @@
         max-width: 209px;
       }
 
-      /* 그래픽 - 항상 중앙 정렬 */
+      /* Support Image - 캐릭터 이미지 */
       .support-image {
-        width: 100%;
-        max-width: 300px;
+        width: 150px;
         height: 150px;
         background: #ffffff;
         border-radius: 0;
@@ -127,7 +123,9 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        mix-blend-mode: multiply;
+        margin-top: 20px;
+        position: relative;
+        z-index: 100; /* 높은 z-index 값 */
       }
 
       /* Bottom Section - 하단 고정 요소 */
@@ -138,7 +136,8 @@
         text-align: center;
         padding: 20px 20px 40px;
         flex-shrink: 0;
-        order: 3; /* flexbox 순서 지정 */
+        position: relative;
+        z-index: 1; /* 낮은 z-index 값 */
       }
 
       .info-card {
@@ -200,6 +199,8 @@
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
+        position: relative;
+        z-index: 1; /* 낮은 z-index 값 */
       }
 
       /* Desktop Layout - 1024px 이상 */
@@ -412,37 +413,36 @@
   </head>
   <body>
     <div class="container">
-      <div class="page-structure">
-        <!-- Main Content -->
-        <div class="main-content">
-          <div class="content-wrapper">
-            <!-- Text Section -->
-            <div class="text-section">
-              <div class="title-section">
-                <div class="logo"></div>
-                <h1 class="main-title">잠시만 기다려 주세요</h1>
-              </div>
-              <p class="subtitle">
-                안전하고 원활한 올리브영 이용을 위해<br />접속 정보를 확인
-                중이에요
-              </p>
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="content-wrapper">
+          <!-- Text Section -->
+          <div class="text-section">
+            <div class="title-section">
+              <div class="logo"></div>
+              <h1 class="main-title">잠시만 기다려 주세요</h1>
             </div>
-
-            <!-- Support Image (Mobile only) -->
-            <div class="support-image"></div>
+            <p class="subtitle">
+              안전하고 원활한 올리브영 이용을 위해<br />접속 정보를 확인
+              중이에요
+            </p>
           </div>
-        </div>
 
-        <!-- Illustration Section (Desktop only) -->
-        <div class="illustration-section">
-          <div class="illustration-wrapper"></div>
+          <!-- Support Image (Mobile only) -->
+          <div class="support-image"></div>
         </div>
+      </div>
 
-        <!-- Bottom Section -->
-        <div class="bottom-section">
-          <div class="captcha-container">
-            ::CAPTCHA_BOX::
-          </div>
+      <!-- Illustration Section (Desktop only) -->
+      <div class="illustration-section">
+        <div class="illustration-wrapper"></div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="bottom-section">
+        <div class="captcha-container">
+          ::CAPTCHA_BOX::
+        </div>
         <div class="info-card">
           <div class="info-row">
             <span class="info-label">RAY_ID</span>
