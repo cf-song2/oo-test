@@ -48,11 +48,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         min-height: 398px;
-        padding: 50px 20px;
-        position: relative;
-        z-index: 10; /* 중간 z-index 값 */
+        padding: 50px 20px 250px 20px;
+        order: 1;
       }
 
       .content-wrapper {
@@ -124,8 +123,6 @@
         background-position: center;
         background-repeat: no-repeat;
         margin-top: 20px;
-        position: relative;
-        z-index: 100; /* 높은 z-index 값 */
       }
 
       /* Bottom Section - 하단 고정 요소 */
@@ -136,8 +133,8 @@
         text-align: center;
         padding: 20px 20px 40px;
         flex-shrink: 0;
-        position: relative;
-        z-index: 1; /* 낮은 z-index 값 */
+        margin-top: -200px; /* negative margin으로 위로 끄어올리기 */
+        order: 3; /* flexbox order */
       }
 
       .info-card {
@@ -199,8 +196,6 @@
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
-        position: relative;
-        z-index: 1; /* 낮은 z-index 값 */
       }
 
       /* Desktop Layout - 1024px 이상 */
